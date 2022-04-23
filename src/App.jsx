@@ -1,24 +1,16 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import FormController from './components/FormController';
+import ToDoList from './components/ToDoList';
+import GlobalStyle from './globalStyles';
 
-import { addToDoAction } from './store/actions';
 import { StyledApp } from './style';
 
-const App = () => {
-  const dispatch = useDispatch();
-
-  const addToDoHandle = () => {
-    dispatch(addToDoAction({ some: 'some' }));
-  };
-
-  return (
-    <StyledApp>
-      App
-      <button type="button" onClick={addToDoHandle}>
-        Button
-      </button>
-    </StyledApp>
-  );
-};
+const App = () => (
+  <StyledApp>
+    <GlobalStyle />
+    <ToDoList />
+    <FormController />
+  </StyledApp>
+);
 
 export default App;

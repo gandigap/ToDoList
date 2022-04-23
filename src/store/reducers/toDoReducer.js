@@ -1,6 +1,5 @@
 import { ADD_TODO } from '../../constant';
 
-/* eslint-disable default-param-last */
 const initialState = {
   toDoList: [],
 };
