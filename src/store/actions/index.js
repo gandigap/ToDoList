@@ -1,6 +1,8 @@
 import { ADD_TODO } from '../../constant';
 
-export const addToDoAction = (payload) => ({
+export const addToDoAction = ({ id, text, statusActive }) => ({
   type: ADD_TODO,
-  payload,
+  id,
+  text,
+  statusActive,
 });

@@ -1,15 +1,19 @@
 import React from 'react';
 import FormController from './components/FormController';
 import ToDoList from './components/ToDoList';
+import { text } from './constant';
 import GlobalStyle from './globalStyles';
 
-import { StyledApp } from './style';
+import { StyledApp, StyledAppContainer, StyledAppTitle } from './style';
 
 const App = () => (
   <StyledApp>
     <GlobalStyle />
-    <ToDoList />
-    <FormController />
+    <StyledAppTitle>{text.mainTitle}</StyledAppTitle>
+    <StyledAppContainer>
+      <FormController />
+      <ToDoList />
+    </StyledAppContainer>
   </StyledApp>
 );
 
