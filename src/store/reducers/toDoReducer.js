@@ -1,18 +1,32 @@
-import { ADD_TODO } from '../../constant';
+/* eslint-disable function-paren-newline */
+/* eslint-disable no-confusing-arrow */
+/* eslint-disable implicit-arrow-linebreak */
+
+import { ADD_TODO, CHANGE_TODO, DELETE_TODO } from '@/constant';
 
 const initialState = {
-  toDoList: [],
+  todoList: [],
 };
 
-export const toDoReducer = (
-  state = initialState,
-  { type, id, text, statusActive },
-) => {
-  switch (type) {
+export const todoReducer = (state = initialState, action) => {
+  switch (action.type) {
     case ADD_TODO:
       return {
         ...state,
-        toDoList: [...state.toDoList, { id, text, statusActive }],
+        todoList: [...state.todoList, { id: action.id, text: action.text }],
+      };
+    case DELETE_TODO:
+      return {
+        ...state,
+        todoList: state.todoList.filter((todo) => todo.id !== action.id),
+      };
+
+    case CHANGE_TODO:
+      return {
+        ...state,
+        todoList: state.todoList.map((todo) =>
+          todo.id === action.id ? { ...todo, text: action.text } : todo,
+        ),
       };
 
     default:

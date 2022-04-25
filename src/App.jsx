@@ -1,7 +1,8 @@
 import React from 'react';
 import FormController from './components/FormController';
-import ToDoList from './components/ToDoList';
-import { text } from './constant';
+import TodoList from './components/TodoList';
+
+import { pageText } from './constant';
 import GlobalStyle from './globalStyles';
 
 import { StyledApp, StyledAppContainer, StyledAppTitle } from './style';
@@ -9,10 +10,10 @@ import { StyledApp, StyledAppContainer, StyledAppTitle } from './style';
 const App = () => (
   <StyledApp>
     <GlobalStyle />
-    <StyledAppTitle>{text.mainTitle}</StyledAppTitle>
+    <StyledAppTitle>{pageText.mainTitle}</StyledAppTitle>
     <StyledAppContainer>
       <FormController />
-      <ToDoList />
+      <TodoList />
     </StyledAppContainer>
   </StyledApp>
 );

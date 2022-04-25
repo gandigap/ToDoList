@@ -1,8 +1,18 @@
-import { ADD_TODO } from '../../constant';
+import { ADD_TODO, CHANGE_TODO, DELETE_TODO } from '../../constant';
 
-export const addToDoAction = ({ id, text, statusActive }) => ({
+export const addTodo = ({ id, text }) => ({
   type: ADD_TODO,
   id,
   text,
-  statusActive,
+});
+
+export const deleteTodo = (id) => ({
+  type: DELETE_TODO,
+  id,
+});
+
+export const changeTodo = (id, text) => ({
+  type: CHANGE_TODO,
+  id,
+  text,
 });

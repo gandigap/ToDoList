@@ -1,21 +1,18 @@
-/* eslint-disable implicit-arrow-linebreak */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
-import ToDoListItem from './ToDoListItem';
 
-const ToDoList = () => {
-  const [list, setList] = useState();
+import TodoListItem from './TodoListItem';
 
-  const { toDoList } = useSelector((state) => state.toDoState);
-
-  useEffect(() => {
-    setList(toDoList);
-  }, [toDoList]);
+const TodoList = () => {
+  const { todoList } = useSelector((state) => state.todoState);
 
   const listToRender = () =>
-    list && list.map((el) => <ToDoListItem key={el.id} dataTodo={el} />);
+    todoList &&
+    todoList.map((todoInfo) => (
+      <TodoListItem key={todoInfo.id} dataTodo={todoInfo} />
+    ));
 
   return <div>{listToRender()}</div>;
 };
 
-export default ToDoList;
+export default TodoList;

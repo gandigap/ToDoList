@@ -4,6 +4,7 @@
     "es2021": true
   },
   "extends": ["react-app", "airbnb"],
+
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -21,6 +22,10 @@
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
     "default-param-last": "off",
-    "implicit-arrow-linebreak": ["error", "off"]
+    "object-curly-newline": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "implicit-arrow-linebreak": "off",
+    "operator-linebreak": "off"
   }
 }

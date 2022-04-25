@@ -28,4 +28,5 @@ export const StyledFormButton = styled.button`
   background-color: #e07a5f;
   color: #264653;
   font-size: 20px;
+  cursor: pointer;
 `;

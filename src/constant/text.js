@@ -1,3 +1,3 @@
-export const text = {
+export const pageText = {
   mainTitle: 'TO DO APP',
 };

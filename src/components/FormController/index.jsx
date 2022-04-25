@@ -1,9 +1,7 @@
-/* eslint-disable no-promise-executor-return */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import { useDispatch } from 'react-redux';
-import { addToDoAction } from '../../store/actions';
+import { addTodo } from '../../store/actions';
 import {
   StyledFormButton,
   StyledFormController,
@@ -18,13 +16,17 @@ const FormController = () => {
         initialValues={{
           toDo: '',
         }}
-        onSubmit={async (values) => {
-          const dataTodo = {
-            id: new Date().getTime(),
-            text: values.toDo,
-            activeStatus: false,
-          };
-          dispatch(addToDoAction(dataTodo));
+        onSubmit={(values, { resetForm }) => {
+          if (values.toDo) {
+            const dataTodo = {
+              id: new Date().getTime(),
+              text: values.toDo,
+              isCompleted: false,
+            };
+
+            dispatch(addTodo(dataTodo));
+            resetForm({ values: '' });
+          }
         }}
       >
         <Form>
