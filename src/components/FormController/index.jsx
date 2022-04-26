@@ -1,7 +1,10 @@
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../../store/actions';
+
+import { addTodo } from '@/store/actions';
+import { buttonText, pageText } from '@/constant';
+
 import {
   StyledFormButton,
   StyledFormController,
@@ -30,9 +33,9 @@ const FormController = () => {
         }}
       >
         <Form>
-          <StyledFormLabel htmlFor="toDo">Action</StyledFormLabel>
+          <StyledFormLabel htmlFor="toDo">{pageText.action}</StyledFormLabel>
           <Field id="toDo" name="toDo" placeholder="Enter to do action" />
-          <StyledFormButton type="submit">Submit</StyledFormButton>
+          <StyledFormButton type="submit">{buttonText.submit}</StyledFormButton>
         </Form>
       </Formik>
     </StyledFormController>

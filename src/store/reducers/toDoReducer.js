@@ -1,7 +1,3 @@
-/* eslint-disable function-paren-newline */
-/* eslint-disable no-confusing-arrow */
-/* eslint-disable implicit-arrow-linebreak */
-
 import { ADD_TODO, CHANGE_TODO, DELETE_TODO } from '@/constant';
 
 const initialState = {

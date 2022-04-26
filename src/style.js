@@ -8,6 +8,10 @@ export const StyledApp = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: #264653;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 export const StyledAppTitle = styled.h2`

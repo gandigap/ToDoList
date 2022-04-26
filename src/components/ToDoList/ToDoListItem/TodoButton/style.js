@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
+import { colors } from '@/constant';
+
 export const StyledTodoButton = styled.button`
   width: 30px;
   height: 30px;
   margin: 0 4px;
-  border: 1px solid #fff;
+  border: 1px solid ${colors.white};
   border-radius: 50%;
-  background: transparent;
+  background-color: ${(props) => props.backgroundColor};
   cursor: pointer;
   transition:all ease 0.3s;
 

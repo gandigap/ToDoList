@@ -26,6 +26,9 @@
     "import/no-unresolved": "off",
     "import/extensions": "off",
     "implicit-arrow-linebreak": "off",
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "function-paren-newline": "off",
+    "no-unused-expressions": "off",
+    "no-confusing-arrow": "off"
   }
 }

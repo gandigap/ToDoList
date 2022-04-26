@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { colors } from '@/constant';
+
 export const StyledFormController = styled.div`
   display: flex;
   align-items: center;
@@ -16,17 +18,22 @@ export const StyledFormController = styled.div`
   & form {
     display: flex;
     align-items: center;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 `;
 
 export const StyledFormLabel = styled.label`
-  color: #e07a5f;
+  color: ${colors.orange};
 `;
 
 export const StyledFormButton = styled.button`
   padding: 4px;
-  background-color: #e07a5f;
-  color: #264653;
+  background-color: ${colors.orange};
+  color: ${colors.darkBlue};
   font-size: 20px;
   cursor: pointer;
 `;

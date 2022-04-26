@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from '@/constant';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -10,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   html,body{
     height: 100%;
     font-family: Open-Sans, Helvetica, Sans-Serif;
-    color: #fff;
+    color:${colors.white};
   }
 
    #root {

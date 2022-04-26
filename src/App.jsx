@@ -1,10 +1,10 @@
 import React from 'react';
-import FormController from './components/FormController';
-import TodoList from './components/TodoList';
 
-import { pageText } from './constant';
+import FormController from '@/components/FormController';
+import TodoList from '@/components/TodoList';
+import { pageText } from '@/constant';
+
 import GlobalStyle from './globalStyles';
-
 import { StyledApp, StyledAppContainer, StyledAppTitle } from './style';
 
 const App = () => (

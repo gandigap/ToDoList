@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 
 import TodoListItem from './TodoListItem';
 
+import { StyledTodoList } from './style';
+
 const TodoList = () => {
   const { todoList } = useSelector((state) => state.todoState);
 
@@ -12,7 +14,7 @@ const TodoList = () => {
       <TodoListItem key={todoInfo.id} dataTodo={todoInfo} />
     ));
 
-  return <div>{listToRender()}</div>;
+  return <StyledTodoList>{listToRender()}</StyledTodoList>;
 };
 
 export default TodoList;
