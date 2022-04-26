@@ -1,12 +1,15 @@
 {
-  "name": "ToDoList",
+  "name": "todolist",
   "version": "1.0.0",
+  "homepage": "https://gandigap.github.io/ToDoList/",
   "main": "./src/index.jsx",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "Webpack .",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "deploy": "gh-pages -d public",
+    "predeploy": "yarn build"
   },
   "repository": "git@github.com:gandigap/ToDoList.git",
   "author": "Ihar Berasneu <igor.simatic@gmail.com>",
@@ -15,6 +18,7 @@
     "@fortawesome/fontawesome-free": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "eslint-import-resolver-alias": "^1.1.2",
+    "gh-pages": "^3.2.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "styled-components": "^5.3.5"
