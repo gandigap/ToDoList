@@ -1,0 +1,53 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "homepage": "https://gandigap.github.io/ToDoList/",
+  "main": "./src/index.jsx",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "Webpack .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "deploy": "gh-pages -d public",
+    "predeploy": "yarn build"
+  },
+  "repository": "git@github.com:gandigap/ToDoList.git",
+  "author": "Ihar Berasneu <igor.simatic@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "gh-pages": "^3.2.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime": "^7.17.9",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "file-loader": "^6.2.0",
+    "formik": "^2.2.9",
+    "prop-types": "^15.8.1",
+    "react-redux": "^8.0.1",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  }
+}
